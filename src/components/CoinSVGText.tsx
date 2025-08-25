@@ -19,17 +19,24 @@ const coinContainerVariants = {
 };
 
 const coinVariants = {
-  initial: { y: 0 },
+  initial: { y: 0, scale: 0.8, filter: "drop-shadow(0 0 0px #ffd700)" },
   animate: {
-    y: [0, -20, 0],
+    y: [0, -40, 0, -10, 0],
     rotateY: [0, 180, 360],
-    opacity: [1, 1, 0],
+    scale: [0.8, 1.2, 1, 1.1, 1],
+    filter: [
+      "drop-shadow(0 0 0px #ffd700)",
+      "drop-shadow(0 0 24px #ffd700)",
+      "drop-shadow(0 0 12px #ffd700)",
+      "drop-shadow(0 0 24px #ffd700)",
+      "drop-shadow(0 0 0px #ffd700)",
+    ],
+    opacity: [1, 1, 0.8, 1, 0],
     transition: {
-      duration: 0.5,
-      ease: easeInOut,
+      duration: 0.9,
     },
   },
-  exit: { y: 0, opacity: 0 },
+  exit: { y: 0, opacity: 0, scale: 0.8 },
 };
 
 export default function CoinSVGText() {
@@ -76,6 +83,11 @@ export default function CoinSVGText() {
                         src="/coin.svg"
                         alt="coin"
                         width={64}
+                        whileHover={{
+                          scale: 1.3,
+                          rotate: 20,
+                          filter: "drop-shadow(0 0 32px #fff700)",
+                        }}
                       />
                     ))}
                 </AnimatePresence>
@@ -85,8 +97,27 @@ export default function CoinSVGText() {
                     src="/coin.svg"
                     width={64}
                     alt="bet"
-                    initial={{ opacity: 0, y: 0 }}
-                    animate={{ opacity: 1, y: [0, -20, 0] }}
+                    initial={{ opacity: 0, y: 0, scale: 0.8 }}
+                    animate={{
+                      opacity: 1,
+                      y: [0, -40, 0, -10, 0],
+                      scale: [0.8, 1.2, 1, 1.1, 1],
+                      filter: [
+                        "drop-shadow(0 0 0px #ffd700)",
+                        "drop-shadow(0 0 24px #ffd700)",
+                        "drop-shadow(0 0 12px #ffd700)",
+                        "drop-shadow(0 0 24px #ffd700)",
+                        "drop-shadow(0 0 0px #ffd700)",
+                      ],
+                      transition: {
+                        duration: 0.9,
+                      },
+                    }}
+                    whileHover={{
+                      scale: 1.3,
+                      rotate: 20,
+                      filter: "drop-shadow(0 0 32px #fff700)",
+                    }}
                   />
                 )}
               </CoinRow>
