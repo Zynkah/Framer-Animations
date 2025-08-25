@@ -15,19 +15,19 @@ function App() {
           <h3>ANIMATIONS LIST</h3>
           <ul>
             <li>
-              <Link to="/heart-to-check">Heart to checkmark</Link>
+              <Link to="/heart-to-check">Heart to Checkmark</Link>
             </li>
             <li>
               <Link to="/text-fade-in">Text Fade in</Link>
             </li>
             <li>
-              <Link to="/dice-roll">Dice roll</Link>
+              <Link to="/dice-roll">Dice Roll</Link>
             </li>
             <li>
-              <Link to="/coin-flip">Coin flip</Link>
+              <Link to="/coin-flip">Coin Flip</Link>
             </li>
             <li>
-              <Link to="/rps">rock paper scissors</Link>
+              <Link to="/rps">Rock Paper Scissors</Link>
             </li>
           </ul>
         </SSideNav>

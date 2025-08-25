@@ -45,7 +45,7 @@ export const SHomePageWrapper = styled.div`
 `;
 
 export const SSideNav = styled.nav`
-  background-color: #00000070;
+  background-color: #000000;
   min-width: 250px;
   padding-inline-start: 5%;
 
