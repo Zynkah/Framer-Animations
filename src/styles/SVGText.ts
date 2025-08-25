@@ -38,16 +38,20 @@ export const mobileModalContentVariants: Variants = {
 
 export const SHomePageWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: auto 1fr;
+  width: 100vw;
+  height: 100vh;
+  gap: 50px;
 `;
 
 export const SSideNav = styled.nav`
+  background-color: #00000070;
+  min-width: 250px;
+  padding-inline-start: 5%;
+
   ul {
     list-style: none;
-  }
-  li:hover {
-    color: #d900d5;
-    cursor: pointer;
+    padding-inline-start: 0;
   }
 `;
 

@@ -12,6 +12,7 @@ function App() {
     <Router>
       <SHomePageWrapper>
         <SSideNav>
+          <h3>ANIMATIONS LIST</h3>
           <ul>
             <li>
               <Link to="/heart-to-check">Heart to checkmark</Link>
