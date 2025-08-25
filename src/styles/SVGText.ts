@@ -36,6 +36,20 @@ export const mobileModalContentVariants: Variants = {
   },
 };
 
+export const SHomePageWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+`;
+
+export const SSideNav = styled.nav`
+  ul {
+    list-style: none;
+  }
+  li:hover {
+    color: #d900d5;
+    cursor: pointer;
+  }
+`;
 
 export const ModalWrapper = styled.div`
   display: flex;
