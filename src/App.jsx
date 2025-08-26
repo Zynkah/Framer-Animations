@@ -6,6 +6,7 @@ import RPSSVGText from "./components/RPSSVGText";
 import HeartToCheck from "./components/HeartToCheckmark";
 import { SHomePageWrapper, SSideNav } from "./styles/SVGText";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import RainingCoins from "./components/RainingCoins";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
             <li>
               <Link to="/rps">Rock Paper Scissors</Link>
             </li>
+            <li>
+              <Link to="/raining-coins">Raining Coins</Link>
+            </li>
           </ul>
         </SSideNav>
         <div>
@@ -42,6 +46,7 @@ function App() {
             <Route path="/dice-roll" element={<DiceSVGText />} />
             <Route path="/coin-flip" element={<CoinSVGText />} />
             <Route path="/rps" element={<RPSSVGText />} />
+            <Route path="/raining-coins" element={<RainingCoins />} />
           </Routes>
         </div>
       </SHomePageWrapper>
