@@ -7,6 +7,7 @@ import HeartToCheck from "./components/HeartToCheckmark";
 import { SHomePageWrapper, SSideNav } from "./styles/SVGText";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import RainingCoins from "./components/RainingCoins";
+import { LoadingChip } from "./components/LoadingChip";
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
             <li>
               <Link to="/raining-coins">Raining Coins</Link>
             </li>
+            <li>
+              <Link to="/loading-chip">Loading Chip</Link>
+            </li>
           </ul>
         </SSideNav>
         <div>
@@ -47,6 +51,7 @@ function App() {
             <Route path="/coin-flip" element={<CoinSVGText />} />
             <Route path="/rps" element={<RPSSVGText />} />
             <Route path="/raining-coins" element={<RainingCoins />} />
+            <Route path="/loading-chip" element={<LoadingChip />} />
           </Routes>
         </div>
       </SHomePageWrapper>
