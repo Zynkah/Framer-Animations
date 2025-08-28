@@ -8,6 +8,7 @@ import { SHomePageWrapper, SSideNav } from "./styles/SVGText";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import RainingCoins from "./components/RainingCoins";
 import { LoadingChip } from "./components/LoadingChip";
+import { DrawnText } from "./components/DrawText";
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
             <li>
               <Link to="/loading-chip">Loading Chip</Link>
             </li>
+            <li>
+              <Link to="/drawn-text">Drawn Text</Link>
+            </li>
           </ul>
         </SSideNav>
         <div>
@@ -52,6 +56,7 @@ function App() {
             <Route path="/rps" element={<RPSSVGText />} />
             <Route path="/raining-coins" element={<RainingCoins />} />
             <Route path="/loading-chip" element={<LoadingChip />} />
+            <Route path="/drawn-text" element={<DrawnText />} />
           </Routes>
         </div>
       </SHomePageWrapper>
