@@ -1,0 +1,46 @@
+import {  motion } from "framer-motion";
+import { CanvasContainer } from "../shared/CanvasContainer";
+import { SDiceContainer } from "./styles";
+
+export const Dice = () => {
+  return (
+    <CanvasContainer>
+      <SDiceContainer>
+        <motion.img
+          src="/dice.svg"
+          alt="dice"
+          width={64}
+          initial={{ opacity: 0, y: 0, x: 0 }}
+          animate={{
+            opacity: 1,
+            y: [-1000, 0, -20, 0],
+            x: [0, -10, -30],
+            rotate: [0, 180, -10, -25, 0],
+            transition: {
+              delay: 0.8,
+              duration: 1,
+              ease: "easeInOut",
+            },
+          }}
+        />
+        <motion.img
+          src="/dice.svg"
+          alt="dice"
+          width={64}
+          initial={{ opacity: 0, y: 0, x: 0 }}
+          animate={{
+            opacity: 1,
+            y: [-1000, 0, -20, 0],
+            x: [0, 10, -10],
+            rotate: [0, 180, -10, -25, 0],
+            transition: {
+              delay: 0.5,
+              duration: 0.8,
+              ease: "easeInOut",
+            },
+          }}
+        />
+      </SDiceContainer>
+    </CanvasContainer>
+  );
+}

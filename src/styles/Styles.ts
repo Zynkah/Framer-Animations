@@ -1,40 +1,5 @@
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import styled, { css, keyframes } from "styled-components";
-
-export const modalContentVariants: Variants = {
-  initial: {
-    y: -60,
-  },
-  animate: {
-    y: 0,
-  },
-  exit: {
-    y: -60,
-  },
-};
-
-export const mobileModalContentVariants: Variants = {
-  initial: {
-    y: "110%",
-    opacity: 1,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      damping: 25,
-      type: "spring",
-    },
-  },
-  exit: {
-    y: "110%",
-    opacity: 0.8,
-    transition: {
-      damping: 25,
-      type: "spring",
-    },
-  },
-};
 
 export const SHomePageWrapper = styled.div`
   display: grid;
@@ -55,13 +20,13 @@ export const SSideNav = styled.nav`
   }
 `;
 
-export const ModalWrapper = styled.div`
+export const SModalWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-export const ModalContent = styled.div`
+export const SModalContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,16 +70,9 @@ export const SGradientWalletModalContent = styled(motion.div)`
   ${FARE_GRADIENT}
 `;
 
-export const CoinRow = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-`;
 
-export const HandRow = styled.div`
+export const SContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
 `;

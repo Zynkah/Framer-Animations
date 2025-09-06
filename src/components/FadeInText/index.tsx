@@ -1,30 +1,10 @@
 import { motion, useAnimation, type Variant } from "framer-motion";
 import { useEffect } from "react";
 import { useRef } from "react";
+import { CanvasContainer } from "../shared/CanvasContainer";
+import { AnimatedTextProps } from "./types";
+import { defaultAnimations } from "./variants";
 
-type AnimatedTextProps = {
-  text: string | string[];
-  once?: boolean;
-  repeatDelay?: number;
-  animation?: {
-    hidden: Variant;
-    visible: Variant;
-  };
-};
-
-const defaultAnimations = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-    },
-  },
-};
 export const FadeInText = ({
   text,
   animation = defaultAnimations,
@@ -42,7 +22,7 @@ export const FadeInText = ({
   }, [controls]);
 
   return (
-    <div>
+    <CanvasContainer>
       <motion.span
         ref={ref}
         initial="hidden"
@@ -61,7 +41,6 @@ export const FadeInText = ({
                   <motion.span
                     style={{ fontSize: "56px" }}
                     key={`${char}-${charIndex}`}
-                    className="inline-block"
                     variants={animation}
                   >
                     {char}
@@ -72,6 +51,6 @@ export const FadeInText = ({
           </span>
         ))}
       </motion.span>
-    </div>
+    </CanvasContainer>
   );
 };
